@@ -15,46 +15,40 @@
     border-radius: 50px;
 }
 
-.rotating-text-container {
-  perspective: 1000px; /* Ajoute de la profondeur pour l'effet de rotation */
-}
-
-.rotating-text {
-  transform-style: preserve-3d;
-  animation: rotateText 10s infinite linear; /* Réglez la durée en fonction de vos besoins */
-  white-space: nowrap;
-  position: absolute; /* Positionne le texte absolument par rapport à son conteneur */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .rotating-text span {
-  display: block; /* Chaque mot est sur sa propre ligne */
+  display: block;
   position: absolute;
-  opacity: 0; /* Les mots sont initialement invisibles */
-  backface-visibility: hidden; /* Cache le texte lorsqu'il est tourné */
+  animation: text-rotate 20s infinite; /* Durée totale basée sur le nombre de spans */
+  opacity: 0;
 }
 
-/* Keyframes pour l'animation */
-@keyframes rotateText {
+.rotating-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.rotating-text span:nth-child(2) {
+  animation-delay: 2s; /* Apparaît après que le premier span a complété son cycle */
+}
+
+.rotating-text span:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.rotating-text span:nth-child(4) {
+  animation-delay: 6s;
+}
+
+@keyframes text-rotate {
   0%, 100% {
-    transform: rotateX(0deg);
-    opacity: 1;
+      opacity: 0;
+      transform: translateY(-50%);
   }
-  25% {
-    transform: rotateX(90deg);
-    opacity: 0;
-  }
-  50% {
-    transform: rotateX(180deg);
-    opacity: 1;
-  }
-  75% {
-    transform: rotateX(270deg);
-    opacity: 0;
+  25%, 75% {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
+
 
 
 

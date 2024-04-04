@@ -12,10 +12,12 @@
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/project.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
     <header>
@@ -30,15 +32,7 @@
         </nav>        
         <!-- Header Content -->
         <div class="header-content">         
-            <div class="rotating-text-container">
-                <div class="rotating-text">
-                    <span>Salut</span>
-                    <span>Hello</span>
-                    <span>Hola</span>
-                    <span>Bonjour</span>
-                    <!-- Ajoutez d'autres éléments span pour plus de mots -->
-                </div>
-            </div>
+            <div id="greetings-root"></div> <!-- React root for Greetings component -->
             
             <p>FRONTEND <br> DEVELOPPER</p>
             <div class="header-buttons">
@@ -181,4 +175,30 @@
     </div>
     <p>Robin INIZAN 2024</p>
 </body>
+<script type="text/babel">
+    const greetings = ['Salut :)', 'Hello :)', 'Hola :)', 'Demat :)', 'Hallo :)'];
+    const Greetings = () => {
+      const [currentGreetingIndex, setCurrentGreetingIndex] = React.useState(0);
+
+      React.useEffect(() => {
+        const intervalId = setInterval(() => {
+          setCurrentGreetingIndex((currentGreetingIndex) =>
+            (currentGreetingIndex + 1) % greetings.length
+          );
+        }, 3000); // Change toutes les 3 secondes
+
+        return () => clearInterval(intervalId);
+      }, []);
+
+      return (
+        <div className="rotating-text-container">
+          <div className="rotating-text">
+            {greetings[currentGreetingIndex]}
+          </div>
+        </div>
+      );
+    };
+
+    ReactDOM.render(<Greetings />, document.getElementById('greetings-root'));
+</script>
 </html>
