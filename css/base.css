@@ -22,3 +22,8 @@ body {
     color: var(--text-color);
     background-color: #00A896 ;
 }
+
+.highlight {
+    color: #007bff;
+  }
+  

@@ -15,46 +15,12 @@
     border-radius: 50px;
 }
 
-.rotating-text span {
-  display: block;
-  position: absolute;
-  animation: text-rotate 20s infinite; /* Durée totale basée sur le nombre de spans */
-  opacity: 0;
+.header-content {
+  margin: 20px;
 }
-
-.rotating-text span:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.rotating-text span:nth-child(2) {
-  animation-delay: 2s; /* Apparaît après que le premier span a complété son cycle */
-}
-
-.rotating-text span:nth-child(3) {
-  animation-delay: 4s;
-}
-
-.rotating-text span:nth-child(4) {
-  animation-delay: 6s;
-}
-
-@keyframes text-rotate {
-  0%, 100% {
-      opacity: 0;
-      transform: translateY(-50%);
-  }
-  25%, 75% {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-
-
-
-.header-content p {
+.header-content h1 {
     font-size: 100px;
-    margin-top: 0;
+    margin-top: 50px;
     line-height: 5.5rem;
 }
 
