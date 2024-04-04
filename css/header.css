@@ -1,23 +1,42 @@
+header {
+    position: relative;
+}
+
 /* Contenu de l'en-tête */
 .header-content {
     position: relative;
-    padding: var(--default-spacing);
+    padding-top: 100px;
+    padding-left: 50px;
 }
 
 /* Image dans l'en-tête */
 #img-robin {
     position: absolute;
-    top: 0;
+    top: -50px; 
     right: 0;
     width: 500px;
     height: auto;
     z-index: 1; 
     border-radius: 50px;
+    margin: 0;
 }
 
-.header-content {
-  margin: 20px;
+.highlight {
+    color: #E76F51;
+  }
+  
+
+.header-content p{
+  font-size: 40px;
+  margin: 0;
+  color: #264653;
 }
+
+.header-content #greetings-root {
+  font-size: 40px;
+  color: #264653;
+}
+
 .header-content h1 {
     font-size: 100px;
     margin-top: 50px;
