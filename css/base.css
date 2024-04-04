@@ -22,3 +22,16 @@ body {
     color: var(--text-color);
     background-color: #00A896 ;
 }
+
+#cursor-circle {
+    position: fixed;
+    width: 45px; /* Taille du cercle */
+    height: 45px; /* Taille du cercle */
+    border-radius: 50%; /* Rend le div complètement rond */
+    border: 1.5px solid #264653; /* Bordure noire de 2px */
+    background: transparent; /* Intérieur transparent */
+    pointer-events: none; /* Le cercle ne gênera pas les clics de souris */
+    transform: translate(-50%, -50%); /* Ajustement pour centrer le cercle sur le curseur */
+    z-index: 10000; /* S'assure que le cercle est bien visible */
+}
+
