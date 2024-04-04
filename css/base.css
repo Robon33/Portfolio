@@ -34,4 +34,19 @@ body {
     transform: translate(-50%, -50%); /* Ajustement pour centrer le cercle sur le curseur */
     z-index: 10000; /* S'assure que le cercle est bien visible */
 }
+.svg-container {
+    margin-left: auto; /* Pousse le conteneur SVG vers la droite */
+    margin-right: 0; /* Colle le conteneur SVG à la droite */
+    width: 20%; /* La largeur du conteneur SVG */
+    /* Assurez-vous que la hauteur est définie ou auto pour maintenir les proportions */
+}
 
+.svg-container svg {
+    width: 100%; /* Le SVG remplit la largeur de .svg-container */
+    height: auto; /* Garde les proportions du SVG */
+}
+
+
+.svg-container svg path {
+    fill: #E76F51; /* votre couleur choisie */
+}

@@ -1,6 +1,7 @@
 #about {
-    padding: 100px;
-    margin-top: 100px;
+    width: 50%;
+    padding: 55px;
+    margin-top: 50px;
     margin-bottom: 0;
 
 
@@ -38,4 +39,23 @@
     padding: 10px 20px;
     font-size: 16px; 
     cursor: pointer;
+}
+
+.texte-interlude {
+    text-align: right; /* Aligner le texte à droite */
+    line-height: 1rem;
+    font-size: 1.5rem;
+    padding: 18px;
+}
+
+#texte-interlude-a {
+    color: #264653; /* Remplacez avec la couleur désirée pour la première phrase */
+}
+
+#texte-interlude-a span {
+    color: #E76F51; /* Remplacez avec la couleur désirée pour le mot "rêve" */
+}
+
+#texte-interlude-b {
+    color: #F0F3BD; /* Remplacez avec la couleur désirée pour la seconde phrase */
 }
