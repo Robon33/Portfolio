@@ -1,0 +1,41 @@
+#about {
+    padding: 100px;
+    margin-top: 100px;
+    margin-bottom: 0;
+
+
+}
+
+#contact {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#contact form {
+    max-width: 500px;
+    width: 100%; 
+    margin-top: 20px; 
+}
+
+#contact label {
+    display: block; 
+    margin-bottom: 5px;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact button {
+    padding: 10px 20px;
+    font-size: 16px; 
+    cursor: pointer;
+}
