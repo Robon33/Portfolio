@@ -21,3 +21,19 @@ function animate() {
 }
 
 animate(); // Démarrer l'animation
+
+
+document.querySelectorAll('.project-details').forEach(details => {
+    details.addEventListener('mouseover', function() {
+        // Trouver le conteneur de média suivant dans la structure HTML
+        this.nextElementSibling.style.display = 'block';
+        this.nextElementSibling.style.opacity = '1';
+    });
+
+    details.addEventListener('mouseout', function() {
+        // Trouver le conteneur de média suivant dans la structure HTML
+        this.nextElementSibling.style.display = 'none';
+        this.nextElementSibling.style.opacity = '0';
+    });
+});
+

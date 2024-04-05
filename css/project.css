@@ -1,51 +1,83 @@
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    -webkit-text-stroke: 2px #E76F51; /* largeur et couleur du contour pour Chrome/Safari */
+    color: transparent; /* rend le remplissage du texte transparent */
+    font-size: 150px; /* ou la taille que vous souhaitez */
+    font-weight: bold; /* nécessaire pour que le contour se voie bien */
+    font-family: 'VotrePoliceDeCaractère', sans-serif;
+}
+
+.project-gallery {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.project-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Espacement entre les projets */
+  border-bottom: 1px solid #cccccc; /* Ligne de séparation */
+  padding-bottom: 10px;
+}
+
+
+.project-title {
+  font-size: 1.5em;
+  color: #ffffff; /* Ajustez la couleur du texte */
+}
+
+.project-year, .project-technologies {
+  color: #aaaaaa; /* Ajustez la couleur du texte secondaire */
+}
+
 #projects {
-    padding: 50px;
+  /* Styles pour la section des projets, si nécessaire */
+}
+.project-gallery {
+  display: flex;
+  flex-direction: column;
 }
 
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.project-item {
+  display: flex;
+  justify-content: flex-start; /* aligne les enfants au début (côté gauche) */
+  align-items: center; /* les centre verticalement */
+  margin-bottom: 20px; /* Espacement entre les projets */
+  border-bottom: 1px solid #cccccc; /* Ligne de séparation */
 }
 
-.project-card {
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.project-details {
+  flex-grow: 1; /* Permet aux détails du projet de croître et de prendre l'espace disponible */
+  padding: 0 400px; /* Ajoute de l'espacement sur les côtés */
 }
 
-.project-card img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
+.project-media {
+  position: absolute;
+  right: 20px; /* Espace à droite du média */
+  top: 50%;
+  transform: translateY(-50%); /* Centrage vertical */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  width: 150px; /* Largeur du média */
+  height: auto; /* Hauteur ajustée automatiquement */
+  overflow: hidden;
+  pointer-events: none; /* Pour permettre les interactions avec les éléments sous-jacents */
 }
 
-.project-card h3 {
-    font-size: 1.5em;
-    margin: 16px;
+.project-item:hover .project-media {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all; /* Interactions permises quand le média est visible */
 }
 
-.project-card p {
-    font-size: 1em;
-    margin: 16px;
-}
-
-.project-card button {
-    background: rgb(116, 116, 243);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-weight: bold;
-}
-
-.project-card button:hover {
-    background-color: darken(var(--primary-color), 10%);
+.project-media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* L'image couvre la zone du média sans déformation */
 }
