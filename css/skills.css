@@ -1,24 +1,45 @@
 #skills {
-    padding: 100px;
+    padding: 100px 20px; /* Réduction du padding latéral pour les petits écrans */
     margin-bottom: 0;
 }
 
 .skills-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr); /* Maintient 4 colonnes */
+    grid-gap: 20px; /* Espace entre les éléments de la grille */
     justify-items: center;
     text-align: center;
 }
 
-.skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .skill i {
-    font-size: 4em;
+    font-size: 4em; /* Taille initiale des icônes */
     margin-bottom: 0.5em;
 }
 
+@media (max-width: 768px) {
+    .skill i {
+        font-size: 3em; /* Réduction de la taille des icônes sur les petits écrans */
+    }
+    
+    .skills-list {
+        grid-gap: 15px; /* Réduit l'espace entre les compétences pour économiser de l'espace */
+    }
+
+    #skills {
+        padding: 50px 10px; /* Réduction supplémentaire du padding pour les très petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .skill i {
+        font-size: 2.5em; /* Réduction encore plus importante de la taille des icônes pour les très petits écrans */
+    }
+    
+    .skills-list {
+        grid-gap: 10px; /* Réduction supplémentaire de l'espace entre les compétences */
+    }
+
+    #skills {
+        padding: 20px 5px; /* Réduction maximale du padding pour les écrans très petits */
+    }
+}

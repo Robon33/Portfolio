@@ -5,9 +5,14 @@
     margin-bottom: 50px;
     -webkit-text-stroke: 2px #E76F51; /* largeur et couleur du contour pour Chrome/Safari */
     color: transparent; 
-    font-size: 150px; /* ou la taille que vous souhaitez */
-    font-weight: bold; /* nécessaire pour que le contour se voie bien */
-    font-family: 'VotrePoliceDeCaractère', sans-serif;
+    font-size: 9.5rem; 
+    font-weight: bold; 
+}
+
+@media (max-width: 768px) {
+    #projects h2 {
+        font-size: 4rem; 
+    }
 }
 
 .project-gallery {
@@ -83,6 +88,53 @@
   object-fit: cover;
 }
 
+@media (max-width: 768px) {
+  .project-gallery {
+      align-items: center; /* Centrer les éléments dans la galerie pour éviter qu'ils ne débordent */
+      padding: 20px;
+  }
+  .project-item h3 {
+    font-size: 30px;
+  }
+
+  .project-item p {
+    font-size: 20px;
+    line-height: 1.2rem;
+  }
+
+  .project-item {
+      width: 100%; /* Utilise toute la largeur disponible, ajustant la largeur du conteneur du projet */
+      padding-left: 0; /* Supprime le padding à gauche qui poussait l'image vers la droite */
+      margin-bottom: 16px; /* Maintient un espace entre les projets */
+  }
+
+  .project-details {
+      width: 100%; /* Assure que les détails du projet utilisent toute la largeur disponible */
+  }
+
+  .project-details::after {
+      content: '';
+      display: block;
+      margin-top: 20px; /* Espace au-dessus de la ligne */
+      width: 100%; /* Assure que la ligne de séparation s'étend sur toute la largeur */
+      height: 1px;
+      background-color: #cccccc;
+  }
+
+  .project-media {
+      position: static; /* Remet l'image dans le flux normal du document */
+      visibility: visible;
+      opacity: 1;
+      width: auto; /* Ajuste la largeur de l'image pour qu'elle s'adapte dans son conteneur */
+      max-width: 90%; /* Empêche l'image de déborder du conteneur */
+      height: auto; /* Hauteur automatique pour maintenir le ratio */
+      margin-top: 20px; /* Espace entre le texte et l'image */
+      margin-bottom: 20px; /* Espace entre l'image et la ligne de séparation */
+      transform: none; /* Supprime toute transformation appliquée précédemment */
+  }
+}
+
+
 
 .mentrat{
   margin-top: 300px;
@@ -97,4 +149,11 @@
 
 .mentrat .mentrat-c{
   color: #E76F51;
+}
+
+@media (max-width: 768px) {
+  .mentrat p {
+      font-size: 2rem;
+      line-height: 2rem; 
+  }
 }

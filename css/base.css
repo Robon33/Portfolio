@@ -38,10 +38,10 @@ body {
     z-index: 10000; /* S'assure que le cercle est bien visible */
 }
 .svg-container {
-    margin-left: auto; /* Pousse le conteneur SVG vers la droite */
-    margin-right: 0; /* Colle le conteneur SVG à la droite */
-    width: 20%; /* La largeur du conteneur SVG */
-    /* Assurez-vous que la hauteur est définie ou auto pour maintenir les proportions */
+    margin-left: auto; 
+    margin-right: 0;
+    width: 20%; 
+   
 }
 
 .svg-container svg {
@@ -52,4 +52,12 @@ body {
 
 .svg-container svg path {
     fill: #E76F51; /* votre couleur choisie */
+}
+
+@media (max-width: 768px) {
+    .svg-container {
+        width: 50%;
+        margin-left: auto;
+        margin-right: 0;
+    }
 }

@@ -47,8 +47,13 @@
     display: block !important;
   }
 
+  .swiper-slide{
+    width: auto;
+    max-width: 100%;
+  }
+  
   .swiper-slide p {
-    font-size: 5em; /* Ajustez selon la taille désirée */
+    font-size: 4.5em; /* Ajustez selon la taille désirée */
     letter-spacing: -2px; /* Ajustez selon l'espace désiré */
     text-transform: uppercase;
     color: #FFFFFF; /* Ou toute autre couleur de votre choix */

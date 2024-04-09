@@ -33,3 +33,12 @@
 #texte-interlude-b {
     color: #F0F3BD; /* Remplacez avec la couleur désirée pour la seconde phrase */
 }
+
+@media (max-width: 768px) {
+    .texte-interlude {
+        text-align: right; /* Aligner le texte à droite */
+        line-height: 2rem;
+        font-size: 1.5rem;
+        padding: 18px;
+    }
+}
