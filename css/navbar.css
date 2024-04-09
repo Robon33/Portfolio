@@ -1,0 +1,43 @@
+nav {
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+nav .website-title {
+    color: #F4A261;
+    font-size: 15px;
+}
+
+nav .mail a {
+    color: white; /* Couleur initiale de l'icône */
+    transition: color 0.3s ease; /* Transition pour l'effet de fondu lors du changement de couleur */
+}
+
+nav .mail a:hover,
+nav .mail a:focus {
+    color: #16a085; /* Couleur de l'icône au survol */
+    animation: iconPulse 1s infinite; /* Nom de l'animation et sa durée */
+}
+
+@keyframes iconPulse {
+    0% {
+        transform: scale(1); /* Taille initiale de l'icône */
+    }
+    50% {
+        transform: scale(1.1); /* L'icône grossit de 10% */
+    }
+    100% {
+        transform: scale(1); /* Retour à la taille initiale */
+    }
+}
