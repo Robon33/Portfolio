@@ -21,46 +21,45 @@ header {
     margin: 0;
 }
 
+@media (max-width: 768px) {
+  #img-robin {
+      position: static; 
+      display: block; 
+      margin: 1rem auto; 
+      width: 80%; 
+  }
+
+}
+
+
 .highlight {
     color: #E76F51;
   }
   
 
 .header-content p{
-  font-size: 35px;
+  font-size: 2rem;
   font-weight: bold;
   margin: 0;
   color: #264653;
 }
 
 .header-content #greetings-root {
-  font-size: 35px;
+  font-size: 2rem;
   font-weight: bold;
   color: #264653;
 }
 
 .header-content h1 {
-    font-size: 100px;
+    font-size: 6rem;
     margin-top: 50px;
     margin-bottom: 0;
     line-height: 5.5rem;
 }
 
-/* Boutons dans l'en-tête */
- button {
-    font-size: 20px;
-    background-color: white;
-    color: black;
-    border: 2px solid rgb(10, 33, 110);
-    border-radius: 10px;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: var(--default-spacing);
+@media (max-width: 768px) {
+  .header-content h1 {
+      font-size: 3rem; 
+      line-height: 3rem;
+  }
 }
-
-button:hover {
-    background-color: rgb(10, 33, 110);
-    color: #ddd;
-}
-
