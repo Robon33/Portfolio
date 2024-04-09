@@ -1,0 +1,58 @@
+.m-interests h4 {
+    color: #E76F51;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 300px;
+    margin-right: 30px;
+}
+
+.interest li {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    display: inline-block; 
+    width: calc(25% - 20px); 
+  }
+  
+  .interest li:not(.-content) {
+    position: relative;
+  }
+  
+  .interest li img {
+    width: 100%;
+    display: block;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .interest li .-content {
+    padding: 15px;
+    background: #fff;
+  }
+  
+  .interest li:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Pour cacher les autres sections et n'afficher que celle active */
+  .interest[style*="display: none"] {
+    display: none !important;
+  }
+  
+  .interest[style*="display: block"] {
+    display: block !important;
+  }
+
+  .swiper-slide p {
+    font-size: 5em; /* Ajustez selon la taille désirée */
+    letter-spacing: -2px; /* Ajustez selon l'espace désiré */
+    text-transform: uppercase;
+    color: #FFFFFF; /* Ou toute autre couleur de votre choix */
+    margin: 0 40px; /* Ajustez l'espacement entre les titres */
+  }
+  
+  
