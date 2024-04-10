@@ -38,26 +38,40 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
   
-  /* Pour cacher les autres sections et n'afficher que celle active */
-  .interest[style*="display: none"] {
-    display: none !important;
-  }
-  
-  .interest[style*="display: block"] {
-    display: block !important;
-  }
-
-  .swiper-slide{
-    width: auto;
-    max-width: 100%;
-  }
   
   .swiper-slide p {
-    font-size: 4.5em; /* Ajustez selon la taille désirée */
-    letter-spacing: -2px; /* Ajustez selon l'espace désiré */
+    font-size: 3rem; /* Ajustez selon la taille désirée */
     text-transform: uppercase;
     color: #FFFFFF; /* Ou toute autre couleur de votre choix */
-    margin: 0 40px; /* Ajustez l'espacement entre les titres */
   }
   
   
+  @media (max-width: 768px) {
+    .m-interests h4 {
+        font-size: 24px; /* Taille plus petite pour les titres sur mobile */
+        margin-top: 50px; /* Ajustez selon l'espace que vous avez en tête */
+        text-align: left; /* Pour l'alignement à gauche sur les mobiles */
+    }
+
+    .swiper-container {
+        overflow: visible; /* Permet aux slides de sortir de l'écran */
+    }
+
+    .swiper-slide {
+        width: 80%; /* Largeur plus petite pour les slides pour les voir sortir de l'écran */
+    }
+
+    .swiper-slide p {
+        font-size: 1.5rem; /* Taille de police plus petite pour les textes des slides */
+    }
+
+    .interest li {
+        width: 100%; /* Largeur complète pour les intérêts, ajustez si nécessaire */
+        box-shadow: none; /* Optionnel : retirez l'ombre pour un look plus plat */
+        margin: 5px 0; /* Moins de marge pour les mobiles */
+    }
+
+    .interest li img {
+        border-radius: 5px; /* Ajustez le rayon de la bordure si nécessaire */
+    }
+}

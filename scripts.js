@@ -23,10 +23,11 @@ function animate() {
 animate(); // Démarrer l'animation
 
 
-// Initialize Swiper with draggable categories and update the content based on the selected category
+
 var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 'auto', // Show all slides according to their size and space between
-    spaceBetween: 2,
+  
+    slidesPerView: '4', // Show all slides according to their size and space between
+    spaceBetween: 20,
     centeredSlides: true, // Center the active slide in view
     slideToClickedSlide: true, // Move to the slide that was clicked
     grabCursor: true, // Show the grab cursor when hovering over the swiper
@@ -62,4 +63,5 @@ var swiper = new Swiper('.swiper-container', {
     var initialCategory = swiper.slides[swiper.activeIndex].getAttribute('data-subject');
     updateContentForCategory(initialCategory);
   });
+  
   
