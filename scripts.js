@@ -26,12 +26,12 @@ animate(); // Démarrer l'animation
 
 var swiper = new Swiper('.swiper-container', {
   
-    slidesPerView: '4', // Show all slides according to their size and space between
+    slidesPerView: '5', // Show all slides according to their size and space between
     spaceBetween: 20,
-    centeredSlides: true, // Center the active slide in view
-    slideToClickedSlide: true, // Move to the slide that was clicked
-    grabCursor: true, // Show the grab cursor when hovering over the swiper
-    loop: true, // Enable looping of slides
+    centeredSlides: true, 
+    slideToClickedSlide: true,
+    grabCursor: true, 
+    loop: true, 
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
